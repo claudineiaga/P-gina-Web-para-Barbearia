@@ -1,0 +1,780 @@
+
+:root {
+  --white-color:                  #ffffff;
+  --primary-color:                #d6a354;
+  --secondary-color:              #c12828;
+  --section-bg-color:             #f0f8ff;
+  --custom-btn-bg-color:          #c12828;
+  --custom-btn-bg-hover-color:    #FDBB2D;
+  --dark-color:                   #000000;
+  --p-color:                      #717275;
+  --border-color:                 #7fffd4;
+  --link-hover-color:             #B22727;
+
+  --body-font-family:             'Unbounded', cursive;
+
+  --h1-font-size:                 74px;
+  --h2-font-size:                 46px;
+  --h3-font-size:                 32px;
+  --h4-font-size:                 28px;
+  --h5-font-size:                 24px;
+  --h6-font-size:                 22px;
+  --p-font-size:                  20px;
+  --btn-font-size:                16px;
+  --copyright-font-size:          14px;
+
+  --border-radius-large:          100px;
+  --border-radius-medium:         20px;
+  --border-radius-small:          10px;
+
+  --font-weight-thin:             200;
+  --font-weight-light:            300;
+  --font-weight-normal:           400;
+  --font-weight-bold:             700;
+}
+
+body {
+  background-color: var(--white-color);
+  font-family: var(--body-font-family); 
+}
+
+h2, h3, h4, h5, h6 {
+  color: var(--dark-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-bold);
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+}
+
+h4 {
+  font-size: var(--h4-font-size);
+}
+
+h5 {
+  font-size: var(--h5-font-size);
+}
+
+h6 {
+  font-size: var(--h6-font-size);
+}
+
+p {
+  color: var(--p-color);
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-light);
+}
+
+ul li {
+  color: var(--p-color);
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-light);
+}
+
+a, button {
+  touch-action: manipulation;
+  transition: all 0.3s;
+}
+
+a {
+  display: inline-block;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+b, strong {
+  font-weight: var(--font-weight-bold);
+}
+
+.section-padding {
+  padding: 100px 50px;
+}
+
+.section-bg {
+  background-color: var(--section-bg-color);
+}
+
+.section-overlay {
+  background-color: var(--dark-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  opacity: 0.45;
+}
+
+.section-overlay + .container {
+  position: relative;
+}
+
+.back-top-icon {
+  font-size: var(--h2-font-size);
+}
+
+.custom-block-bg-overlay-wrap {
+  background: var(--primary-color);
+  border-radius: var(--border-radius-medium);
+  transition: all 0.3s ease;
+}
+
+.custom-block-bg-overlay-wrap:hover {
+  background: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
+  transform: scale(1.05);
+}
+
+.custom-block-bg-overlay-image {
+  border-radius: var(--border-radius-medium);
+  display: block;
+  margin: auto;
+  height: 100%;
+  object-fit: cover;
+  transform: rotate(8deg);
+}
+
+.custom-block-bg-overlay-wrap:hover .team-info {
+  bottom: 10px;
+}
+
+.custom-btn {
+  background: var(--custom-btn-bg-color);
+  border: 2px solid transparent;
+  border-radius: var(--border-radius-large);
+  color: var(--white-color);
+  font-size: var(--btn-font-size);
+  font-weight: var(--font-weight-bold);
+  line-height: normal;
+  transition: all 0.3s;
+  padding: 10px 20px;
+}
+
+.custom-btn:hover {
+  background: var(--custom-btn-bg-hover-color);
+  color: var(--white-color);
+}
+
+.custom-border-btn {
+  background: transparent;
+  border: 2px solid var(--custom-btn-bg-color);
+  color: var(--custom-btn-bg-color);
+}
+
+.custom-btn-bg-white {
+  border-color: var(--white-color);
+  color: var(--white-color);
+}
+
+.custom-btn-italic {
+  font-style: italic;
+}
+
+.sidebar {
+  background: var(--primary-color);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  padding: 50px 0 0;
+}
+
+.sidebar-sticky {
+  height: calc(100vh - 48px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+  position: relative;
+}
+
+.navbar {
+  background: transparent;
+  z-index: 9;
+}
+
+.logo-image {
+  width: 154px;
+  height: auto;
+  margin-bottom: 70px;
+}
+
+#sidebarMenu .nav-link {
+  color: var(--dark-color);
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  position: relative;
+}
+
+#sidebarMenu .nav-link.active, 
+#sidebarMenu .nav-link:hover {
+  color: var(--white-color);
+}
+
+.navbar-toggler {
+  background: var(--primary-color);
+  border-radius: var(--border-radius-large);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 222;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  margin: 25px;
+  width: 55px;
+  height: 55px;
+  outline: none;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  background: transparent;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before,
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+  transition: top 300ms 50ms ease, -webkit-transform 300ms 350ms ease;
+  transition: top 300ms 50ms ease, transform 300ms 350ms ease;
+  transition: top 300ms 50ms ease, transform 300ms 350ms ease, -webkit-transform 300ms 350ms ease;
+  top: 0;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+  transform: rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+  transform: rotate(-45deg);
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  background: var(--white-color);
+  transition: background 10ms 300ms ease;
+  display: block;
+  margin: auto;
+  width: 25px;
+  height: 2px;
+  position: relative;
+}
+
+.navbar-toggler .navbar-toggler-icon:before,
+.navbar-toggler .navbar-toggler-icon:after {
+  transition: top 300ms 350ms ease, -webkit-transform 300ms 50ms ease;
+  transition: top 300ms 350ms ease, transform 300ms 50ms ease;
+  transition: top 300ms 350ms ease, transform 300ms 50ms ease, -webkit-transform 300ms 50ms ease;
+  position: absolute;
+  right: 0;
+  left: 0;
+  background: var(--white-color);
+  width: 25px;
+  height: 2px;
+  content: '';
+}
+
+.navbar-toggler .navbar-toggler-icon::before {
+  top: -8px;
+}
+
+.navbar-toggler .navbar-toggler-icon::after {
+  top: 8px;
+}
+
+.hero-section {
+  background-image: url('../images/cliente-cortando-o-cabelo.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  padding: 50px;
+  padding-bottom: 0;
+  min-height: 665px;
+  border-bottom: 15px solid var(--primary-color);
+}
+
+@media screen and (min-width: 991px) {
+  .hero-section {
+    height: calc(100vh - 0px);
+  }
+}
+
+.hero-section::after {
+  content: "";
+  background: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.65;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.custom-block {
+  border: 10px solid var(--primary-color);
+  border-radius: 100%;
+  position: absolute;
+  z-index: 2;
+  bottom: -60px;
+  right: -60px;
+  padding: 50px 90px 50px 50px;
+  width: 360px;
+  height: 360px;
+}
+
+.custom-block .custom-btn {
+  background: var(--primary-color);
+}
+
+.custom-block .custom-btn:hover {
+  background: var(--secondary-color);
+}
+
+.custom-block-image {
+  border: 10px solid var(--primary-color);
+  border-radius: 100%;
+  position: absolute;
+  top: -60px;
+  right: 20px;
+  left: 0;
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  object-fit: cover;
+}
+
+.about-section h6 {
+  color: var(--secondary-color);
+}
+
+.about-section .custom-block-bg-overlay-image {
+  width: 100%;
+  max-height: 250px;
+}
+
+.about-section .custom-block-bg-overlay-wrap {
+  position: relative;
+}
+
+.team-info {
+  background: var(--white-color);
+  border-radius: var(--border-radius-large);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 10px 40px;
+  padding: 10px 17px 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.featured-section {
+  background-image: url('../imagens/barbeiro-e-cliente-batendo-as-maos.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+}
+
+.featured-section h2 {
+  color: var(--secondary-color);
+}
+
+.featured-section p {
+  color: var(--white-color);
+}
+
+.featured-section strong {
+  background: var(--primary-color);
+  border-radius: var(--border-radius-medium);
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+}
+
+.services-thumb {
+  border-radius: var(--border-radius-medium);
+  position: relative;
+  overflow: hidden;
+}
+
+.services-thumb:hover .services-info {
+  border-color: var(--primary-color);
+  border-width: 5px;
+}
+
+.services-thumb:hover .services-image {
+  transform: scale(1.05);
+}
+
+.services-image {
+  border-radius: var(--border-radius-medium);
+  display: block;
+  margin: auto;
+  transition: all 0.3s;
+}
+
+.services-thumb-price {
+  background: var(--primary-color);
+  border-radius: var(--border-radius-medium);
+  font-size: var(--copyright-font-size);
+  margin-left: auto;
+  padding: 5px 10px;
+}
+
+.services-info {
+  border-radius: var(--border-radius-medium);
+  border: 1px solid var(--white-color);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 20px;
+  padding: 25px 30px;
+  transition: all 0.3s ease;
+}
+
+.services-info h4 {
+  color: var(--white-color);
+}
+
+
+/*---------------------------------------
+  PRICE LIST             
+-----------------------------------------*/
+.price-list-section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.price-list-thumb-wrap {
+  padding-right: 50px;
+}
+
+.price-list-thumb {
+  margin-bottom: 10px;
+}
+
+.price-list-thumb:last-child {
+  margin-bottom: 0;
+}
+
+.price-list-thumb h6 strong {
+  color: var(--primary-color);
+}
+
+.price-list-thumb-divider {
+  background: var(--p-color);
+  flex: auto;
+  height: 2px;
+  margin: auto 15px 0;
+}
+
+.price-list-section .custom-block-bg-overlay-wrap {
+  padding: 0;
+}
+
+
+/*---------------------------------------
+  BOOKING               
+-----------------------------------------*/
+.booking-section {
+  background-image: url('../images/vintage-chair-barbershop.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.booking-form {
+  background: var(--white-color);
+  border-radius: var(--border-radius-medium);
+  padding: 65px;
+}
+
+.google-map {
+  border-radius: var(--border-radius-medium);
+  filter: hue-rotate(45deg);
+}
+
+.contact-block-wrap {
+  background: var(--primary-color);
+  border-radius: var(--border-radius-medium);
+  padding: 0;
+  min-height: 200px;
+}
+
+.contact-block {
+  background: var(--secondary-color);
+  border-radius: var(--border-radius-medium);
+  transform: rotate(8deg);
+  height: 100%;
+  padding: 20px 40px;
+}
+
+.contact-block h6 {
+  transform: rotate(-8deg);
+}
+
+.contact-block .custom-icon {
+  background: var(--primary-color);
+  border-radius: var(--border-radius-large);
+  display: block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  position: relative;
+}
+
+.contact-block strong {
+  display: block;
+  color: var(--white-color);
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+
+/*---------------------------------------
+  CUSTOM FORM               
+-----------------------------------------*/
+.custom-form .form-control {
+  color: var(--p-color);
+  margin-bottom: 24px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.custom-form .form-control:hover,
+.custom-form .form-control:focus {
+  background: var(--section-bg-color);
+  border-color: transparent;
+}
+
+.custom-form button[type="submit"] {
+  background: var(--custom-btn-bg-color);
+  border: none;
+  border-radius: var(--border-radius-large);
+  color: var(--white-color);
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-medium);
+  transition: all 0.3s;
+  margin-bottom: 0;
+}
+
+.custom-form button[type="submit"]:hover,
+.custom-form button[type="submit"]:focus {
+  background: var(--custom-btn-bg-hover-color);
+  border-color: transparent;
+}
+
+
+/*---------------------------------------
+  SITE FOOTER              
+-----------------------------------------*/
+.site-footer {
+  position: relative;
+  padding: 80px 50px;
+  padding-top: 0;
+}
+
+.site-footer::after {
+  content: "";
+  background: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+}
+
+.site-footer-links {
+  padding-left: 0;
+}
+
+.site-footer-link-item {
+  list-style: none;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.site-footer strong {
+  display: block;
+  color: var(--secondary-color);
+}
+
+.copyright-text {
+  font-size: var(--copyright-font-size);
+}
+
+
+/*---------------------------------------
+  SOCIAL ICON               
+-----------------------------------------*/
+.social-icon {
+  margin: 0;
+  padding: 0;
+}
+
+.social-icon-item {
+  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.social-icon-link {
+  background: var(--secondary-color);
+  border-radius: var(--border-radius-large);
+  color: var(--white-color);
+  font-size: var(--copyright-font-size);
+  display: block;
+  margin: 0 3px;
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  line-height: 36px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.social-icon-link:hover {
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+
+.social-icon-link span {
+  display: block;
+}
+
+
+/*---------------------------------------
+  RESPONSIVE STYLES               
+-----------------------------------------*/
+@media screen and (max-width: 1200px) {
+  h1 {
+    font-size: 62px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  h1 {
+    font-size: 54px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 32px;
+  }
+
+  h4 {
+    font-size: 28px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  h6 {
+    font-size: 18px;
+  }
+
+  .section-padding,
+  .hero-section {
+    padding: 50px 25px;
+  }
+
+  .custom-block {
+    display: none;
+  }
+  
+  .navbar {
+    background-color: var(--dark-color);
+  }
+
+  .navbar-expand-lg .navbar-nav {
+    padding-bottom: 30px;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 0;
+  }
+
+  .booking-form {
+    padding: 45px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .custom-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 38px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  h4 {
+    font-size: 22px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  .services-info h4 {
+    font-size: 20px;
+  }
+
+  .booking-form {
+    padding: 35px;
+  }
+}
+
